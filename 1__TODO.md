@@ -2,8 +2,8 @@
 2. Terraform with Docker compose
 
 REQUIREMENTS
-Terraform configured with S3 buckets and RDS / DynamoDB that will be "plugged" into the backend
-    `NOTE`: Utilize strict IAM policies
+Terraform configured with S3 buckets and RDS / DynamoDB that will be "plugged" into the backend  
+    NOTE: Utilize strict IAM policies
 
 Key ideas 💡:  
     - Ideally, we will only have to call `terraform apply` and it will deploy everything.  
@@ -12,5 +12,5 @@ Key ideas 💡:
     - Full E2E testing with cypress using docker containers to spin up database instances for testing and then tear them down.  
 
 
-Few questions to answer:
+Few questions to answer:  
     - Do I use Prisma as an ORM or just pure SQL?
