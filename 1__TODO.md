@@ -1,7 +1,4 @@
-1. Docker Compose with e2e MySQL database testing
-2. Terraform with Docker compose
-
-REQUIREMENTS
+REQUIREMENTS  
 Terraform configured with S3 buckets and RDS / DynamoDB that will be "plugged" into the backend  
     NOTE: Utilize strict IAM policies
 
@@ -13,4 +10,7 @@ Key ideas 💡:
 
 
 Few questions to answer:  
-    - Do I use Prisma as an ORM or just pure SQL?
+    - Do I use Prisma as an ORM or just pure SQL?  
+
+1. Docker Compose with e2e MySQL database testing  
+2. Terraform with Docker compose  
