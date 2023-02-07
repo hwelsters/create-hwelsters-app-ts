@@ -1,9 +1,2 @@
 */node_modules
 */build
-
-terraform/zip
-terraform/.terraform
-terraform/response.json
-terraform/terraform.tfstate
-terraform/.terraform.lock.hcl
-terraform/terraform.tfstate.backup
