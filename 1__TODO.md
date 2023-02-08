@@ -12,5 +12,6 @@ Key ideas 💡:
 Few questions to answer:  
     - Do I use Prisma as an ORM or just pure SQL?  
 
+1. Use Prisma on backend
 1. Docker Compose with e2e MySQL database testing  
 2. Terraform with Docker compose  
