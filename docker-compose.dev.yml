@@ -2,27 +2,31 @@ version: "3.8"
 services:
   backend:
     build: 
-      context: ./backend
-      dockerfile: Dockerfile
+      context: ../backend
+      dockerfile: Dockerfile.dev
     container_name: backend_c
     networks:
       - webnet
-    volumes:
-      - ./backend:/app
-
-  database:
-    image:  mysql:5.7
-    container_name: database_c
-    networks:
-      - webnet
-    volumes:
-      - mysql:/var/lib/mysql
-    restart: always
+    ports:
+      - '4000:4000'
     environment:
-      - MYSQL_DATABASE=db
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD=password
+      - PORT=4000
+    volumes:
+      - ./backend/src:/app/src
+
+  # database:
+  #   image:  mysql:5.7
+  #   container_name: database_c
+  #   networks:
+  #     - webnet
+  #   volumes:
+  #     - mysql:/var/lib/mysql
+  #   restart: always
+  #   environment:
+  #     - MYSQL_DATABASE=db
+  #     - MYSQL_USER=user
+  #     - MYSQL_PASSWORD=password
+  #     - MYSQL_ROOT_PASSWORD=password
  
 networks:
   webnet:
