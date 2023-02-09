@@ -12,6 +12,7 @@ Key ideas 💡:
 Few questions to answer:  
     - Do I use Prisma as an ORM or just pure SQL?  
 
-1. Use Prisma on backend
-1. Docker Compose with e2e MySQL database testing  
-2. Terraform with Docker compose  
+- Use Prisma on backend
+- Docker Compose with e2e MySQL database testing  
+- Terraform with Docker compose  
+- Maybe make a python script or something that generates all the TF files need to create all the .tf files needed to deploy every function in the `./lambda` folder
