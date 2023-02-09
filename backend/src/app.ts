@@ -6,18 +6,18 @@
                 Sup dudes!
 */
 
-import express, { type Request, type Response } from 'express'
-import dotenv from 'dotenv'
-import cors from 'cors'
-import morgan from 'morgan'
+import express, { type Request, type Response } from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import morgan from "morgan";
 
-dotenv.config()
+dotenv.config();
 
-const app = express()
-app.use(cors())
-app.use(morgan('tiny'))
+const app = express();
+app.use(cors());
+app.use(morgan("tiny"));
 
-const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json('HEALTH CHECK :: Health checked! 💉')
-app.get('/api', onHealthCheck)
+const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json("HEALTH CHECK :: Health checked! 💉");
+app.get("/api", onHealthCheck);
 
-export default app
+export default app;
