@@ -4,7 +4,7 @@ dev-up:
 dev-down:
 	docker-compose --env-file .env.dev -f docker-compose.dev.yml down
 	
-test-down:
+test-up:
 	docker-compose -f docker-compose.test.yml up
 
 test-down:

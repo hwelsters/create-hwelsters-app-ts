@@ -21,4 +21,4 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     
 volumes:
-  mysql:
+  postgres:
