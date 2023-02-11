@@ -15,3 +15,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
+model Hwelster {
+  id    Int   @id
+  email String
+}
