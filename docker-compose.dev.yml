@@ -13,16 +13,12 @@ services:
 
   database:
     image: postgres:13
-    networks:
-      - webnet
     volumes:
-      - mysql:/var/lib/mysql
+      - postgres:/var/lib/postgresql/data
     restart: always
     environment:
-      - MYSQL_DATABASE=db
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
-      - MYSQL_ROOT_PASSWORD=password
-
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    
 volumes:
   mysql:
