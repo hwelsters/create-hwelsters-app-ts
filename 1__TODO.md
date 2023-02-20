@@ -12,8 +12,9 @@ Key ideas 💡:
 Few questions to answer:  
     - Do I use Prisma as an ORM or just pure SQL?  
 
-DEADLINES:
-[02/11/2023 Sat] [🦜] Use Prisma on backend
-[03/11/2023 Sun] [🦜] Docker Compose with e2e MySQL database testing  
-[19/11/2023 Sun] [🦜] Terraform with Docker compose  
-[I dunno       ] [🦜] Maybe make a python script or something that generates all the TF files need to create all the .tf files needed to deploy every function in the `./lambda` folder
+TODO:
+[🦜] Use Prisma on backend
+[🦜] Docker Compose with e2e MySQL database testing  
+[🦜] Terraform with Docker compose  
+[🦜] Maybe make a python script or something that generates all the TF files need to create all the .tf files needed to deploy every function in the `./lambda` folder
+[🦜] CDN + HTML caching for ⚡ speedy page-loads
