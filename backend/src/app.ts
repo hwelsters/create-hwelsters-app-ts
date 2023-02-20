@@ -16,7 +16,7 @@ import morgan from 'morgan'
 import validateEnv from 'utils/validate_env'
 
 dotenv.config()
-validateEnv
+validateEnv()
 
 const app = express()
 app.use(cors())
