@@ -12,5 +12,5 @@ TODO:
 [🦜] Configure Prisma on backend
 [🦜] Docker Compose with e2e testing + database
 [🦜] Terraform to deploy everything to 👉 AWS ECS  
-[🦜] Maybe make a python script or something that generates all the TF files needed to create all the .tf files needed to deploy every function in the `./lambda` folder. Python can should work on all OS's so I kinda prefer it over Bash 😵 rn.
+[🦜] Maybe make a python script or something that generates all the TF files needed to deploy every function in the `./lambda` folder. Python should work on all OS's so I kinda prefer it over Bash 😵 rn.
 [🦜] CDN + HTML caching for ⚡ speedy page-loads  
