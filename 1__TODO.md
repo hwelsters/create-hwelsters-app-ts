@@ -12,7 +12,7 @@ Key ideas 💡:
 Few questions to answer:  
     - Do I use Prisma as an ORM or just pure SQL?  
 
-TODO:
+TODO:  
 [🦜] Use Prisma on backend  
 [🦜] Docker Compose with e2e MySQL database testing  
 [🦜] Terraform with Docker compose to 👉 AWS ECS  
