@@ -13,8 +13,8 @@ Few questions to answer:
     - Do I use Prisma as an ORM or just pure SQL?  
 
 TODO:
-[🦜] Use Prisma on backend
+[🦜] Use Prisma on backend  
 [🦜] Docker Compose with e2e MySQL database testing  
-[🦜] Terraform with Docker compose to 👉 AWS ECS
-[🦜] Maybe make a python script or something that generates all the TF files need to create all the .tf files needed to deploy every function in the `./lambda` folder
-[🦜] CDN + HTML caching for ⚡ speedy page-loads
+[🦜] Terraform with Docker compose to 👉 AWS ECS  
+[🦜] Maybe make a python script or something that generates all the TF files need to create all the .tf files needed to deploy every function in the `./lambda` folder  
+[🦜] CDN + HTML caching for ⚡ speedy page-loads  
