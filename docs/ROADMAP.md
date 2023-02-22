@@ -9,8 +9,7 @@ Key ideas 💡:
     - Full E2E testing with cypress using docker containers to spin up database instances for testing and then tear them down.  
 
 TODO:  
+[🦜] Terraform to deploy everything to 👉 AWS ECS, set up an S3 bucket, RDS PostgresSQL, CDN for ⚡ speedy page-loads,
+[🦜] Maybe make a python script or something that generates all the TF files needed to deploy every function in the `./lambda` folder. Python should work on all OS's so I kinda prefer it over Bash 😵 rn.  
 [🦜] Configure Prisma on backend  
 [🦜] Docker Compose with e2e testing + database  
-[🦜] Terraform to deploy everything to 👉 AWS ECS  
-[🦜] Maybe make a python script or something that generates all the TF files needed to deploy every function in the `./lambda` folder. Python should work on all OS's so I kinda prefer it over Bash 😵 rn.  
-[🦜] CDN + HTML caching for ⚡ speedy page-loads  
