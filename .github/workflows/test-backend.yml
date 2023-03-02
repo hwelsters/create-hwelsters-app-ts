@@ -3,8 +3,10 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    paths: ['backend/**']
   pull_request:
     branches: [ main ]
+    paths: ['backend/**']
 
 jobs:
   check:
@@ -19,6 +21,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
+      - name: Clean install
+        run: yarn config set ignore-engines true && yarn install --frozen-lockfile
 
       - name: Lint
         run: yarn lint
