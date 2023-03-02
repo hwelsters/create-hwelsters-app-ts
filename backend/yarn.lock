@@ -819,6 +819,11 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-18.11.18.tgz"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
+"@types/node@^18.14.3":
+  version "18.14.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.3.tgz#485070908df2e7b476ecaf83108e50b4d925a153"
+  integrity sha512-1y36CC5iL5CMyKALzwX9cwwxcWIxvIBe3gzs4GrXWXEQ8klQnCZ2U/WDGiNrXHmQcUhnaun17XG9TEIDlGj2RA==
+
 "@types/prettier@^2.1.5":
   version "2.7.2"
   resolved "https://registry.npmjs.org/@types/prettier/-/prettier-2.7.2.tgz"
