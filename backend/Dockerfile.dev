@@ -6,6 +6,5 @@ COPY tsconfig.json .
 COPY yarn.lock .
 RUN yarn install
 
-# COPY ./src ./src
-
+RUN npx prisma migrate
 CMD ["yarn", "dev"]
