@@ -1,22 +1,12 @@
-/*
-
-     _                 _      _
-    | |_ __ __ __ ___ | | ___| |_  ___  _ _  ___
-    | ' \\ V  V // -_)| |(_-<|  _|/ -_)| '_|(_-<
-    |_||_|\_/\_/ \___||_|/__/ \__|\___||_|  /__/
-                Sup dudes!
-
-*/
-
 import express, { type Request, type Response } from 'express'
-import dotenv from 'dotenv'
 import cors from 'cors'
 import morgan from 'morgan'
 
-import validateEnv from 'utils/validate_env'
-validateEnv()
+import dotenv from 'dotenv'
 
+import validateEnv from './utils/validate_env'
 dotenv.config()
+validateEnv()
 
 const app = express()
 app.use(cors())

@@ -1,15 +1,16 @@
 version: "3.8"
 services:
-  # backend:
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile.dev
-  #   ports:
-  #     - "${BACKEND_PORT}:${BACKEND_PORT}"
-  #   environment:
-  #     - PORT=${BACKEND_PORT}
-  #   volumes:
-  #     - ./backend/src:/app/src
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    environment:
+      - PORT=${BACKEND_PORT}
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./backend/src:/app/src
 
   # frontend:
   #   build:
