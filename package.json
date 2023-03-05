@@ -1,9 +1,6 @@
 {
-  "name": "create-hwelsters-app-ts",
-  "version": "1.0.0",
-  "description": "Basic scaffolding for Next / Express / Docker / Terraform.",
   "scripts": {
-    "dev:up": "docker compose --env-file .env.dev -f docker-compose.dev.yml up",
+    "dev:up": "docker compose --env-file .env.dev -f docker-compose.dev.yml up --build",
     "dev:down": "docker compose --env-file .env.dev -f docker-compose.dev.yml down",
     "dev:bash": "docker compose --env-file .env.dev -f docker-compose.dev.yml exec backend",
     "test:up": "docker compose -f docker-compose.test.yml up",
@@ -12,6 +9,3 @@
     "uncommited": "git ls-files --modified --deleted"
   }
 }
-
-
-

@@ -8,17 +8,21 @@ services:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     environment:
       - PORT=${BACKEND_PORT}
-    depends_on:
-      database:
-        condition: service_healthy
-    env_file:
-      - .env.dev
+      - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./backend/src:/app/src
 
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile.dev
+  #   ports:
+  #     - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+  #   environment:
+  #     - PORT=${FRONTEND_PORT}
+  
   database:
     image: postgres:13
-    hostname: database
     volumes:
       - postgres:/var/lib/postgresql/data
     restart: always
@@ -27,11 +31,6 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     ports:
       - "127.0.0.1:${POSTGRES_PORT}:${POSTGRES_PORT}"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     
 volumes:
   postgres:
