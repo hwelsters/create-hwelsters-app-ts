@@ -8,29 +8,30 @@
 
 */
 
-import express, { type Application, type Request, type Response } from "express";
-import cors from "cors";
-import morgan from "morgan";
+import express, { type Application, type Request, type Response } from 'express'
+import cors from 'cors'
+import morgan from 'morgan'
 
-import dotenv from "dotenv";
-dotenv.config();
+import dotenv from 'dotenv'
 
-import validateEnv from "./utils/validate_env";
-validateEnv();
+import validateEnv from './utils/validate_env'
 
-const app : Application = express();
-app.use(cors());
-app.use(morgan("tiny"));
+dotenv.config()
+validateEnv()
 
-const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json("HEALTH CHECK :: Health checked! 💉");
-app.get("/api", onHealthCheck);
+const app: Application = express()
+app.use(cors())
+app.use(morgan('tiny'))
+
+const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json('HEALTH CHECK :: Health checked! 💉')
+app.get('/api', onHealthCheck)
 
 // JUST FOR TESTING
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
-app.get("/db-test", async () => {
-  const allUsers = await prisma.hwelster.findMany();
-  console.log(allUsers);
-});
+// import { PrismaClient } from '@prisma/client'
+// const prisma = new PrismaClient()
+// app.get('/db-test', async () => {
+//   const allUsers = await prisma.hwelster.findMany()
+//   console.log(allUsers)
+// })
 
-export default app;
+export default app
