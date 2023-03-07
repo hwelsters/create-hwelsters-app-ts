@@ -1,4 +1,6 @@
-![image](https://user-images.githubusercontent.com/84760072/223294621-262d66d8-eaba-4867-8ba6-60e6255733f8.png)
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/84760072/223321151-8b77a57a-ad72-48df-a34c-7e031a6c7ff2.png" width="600"/>
+</p>
 
 <p align="center">
     Scaffolding for web-apps written in Next.JS and Express.JS
