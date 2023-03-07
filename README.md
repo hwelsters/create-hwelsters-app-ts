@@ -16,3 +16,7 @@
     <a href="https://github.com/hwelsters/create-hwelsters-app-ts/stargazers">
 		<img alt="Stargazers" src="https://img.shields.io/github/stars/hwelsters/create-hwelsters-app-ts?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
 </p>
+
+
+<h2 align="center">Credits</h2>
+<p align="center">I copied/stole <a href="https://github.com/catppuccin">Catppuccin's</a> beautiful colors and README.</p>
