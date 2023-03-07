@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/84760072/223293190-2161d4ae-f760-4244-a1fc-e032cc6346df.png)
 
 <p align="center">
-    WIP
+    Scaffolding for web-apps written in Next.JS and Express.JS
 </p>
 
 <p align="center">
