@@ -8,17 +8,6 @@
 //
 //*************************************************
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+resource "aws_vpc" "vpc" {
 
-generator client {
-  provider = "prisma-client-js"
-}
-
-model User {
-  id      Int      @default(autoincrement()) @id
-  email   String   @unique
-  name    String?
 }

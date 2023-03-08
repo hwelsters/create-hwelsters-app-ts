@@ -9,7 +9,4 @@ COPY tsconfig.json .
 COPY ./prisma ./prisma
 RUN npx prisma generate
 
-COPY .env .
-RUN npx prisma migrate dev --name init
-
 CMD ["yarn", "dev"]

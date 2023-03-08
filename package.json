@@ -2,7 +2,7 @@
   "scripts": {
     "dev:up": "docker compose --env-file .env.dev -f docker-compose.dev.yml up --build",
     "dev:down": "docker compose --env-file .env.dev -f docker-compose.dev.yml down",
-    "dev:bash": "docker compose --env-file .env.dev -f docker-compose.dev.yml exec backend",
+    "dev:bash": "docker compose --env-file .env.dev -f docker-compose.dev.yml exec backend /bin/sh",
     "test:up": "docker compose -f docker-compose.test.yml up",
     "test:down": "docker compose -f docker-compose.test.yml down",
     "clean": "docker container prune & docker volume prune",

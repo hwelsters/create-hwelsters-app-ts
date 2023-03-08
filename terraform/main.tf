@@ -10,13 +10,11 @@ terraform {
 }
 
 provider "aws" {
-  # region = "us-east-2"
   region = "us-west-1"
 }
 
 resource "aws_instance" "example" {
   ami                    = "ami-0d221cb540e0015f4"
-  # ami                    = "ami-060d3509162bcc386"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
@@ -29,13 +27,13 @@ resource "aws_instance" "example" {
   user_data_replace_on_change = true
 
   tags = {
-    Name = "terraform-example"
+    Name = "${var.name}-instance"
   }
 }
 
 resource "aws_security_group" "instance" {
 
-  name = var.security_group_name
+  name = "${var.name}-security-group"
 
   ingress {
     from_port   = var.server_port

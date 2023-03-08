@@ -1,4 +1,4 @@
-/*
+/*************************************************
 
      _                 _      _
     | |_ __ __ __ ___ | | ___| |_  ___  _ _  ___
@@ -6,7 +6,7 @@
     |_||_|\_/\_/ \___||_|/__/ \__|\___||_|  /__/
                 Sup dudes!
 
-*/
+*************************************************/
 
 import express, { type Application, type Request, type Response } from 'express'
 import cors from 'cors'
@@ -27,11 +27,17 @@ const onHealthCheck = (_: Request, response: Response): Response<any, Record<str
 app.get('/api', onHealthCheck)
 
 // JUST FOR TESTING
-// import { PrismaClient } from '@prisma/client'
-// const prisma = new PrismaClient()
-// app.get('/db-test', async () => {
-//   const allUsers = await prisma.hwelster.findMany()
-//   console.log(allUsers)
-// })
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+
+app.get('/users', async (req, res) => {
+     try { 
+       const users = await prisma.user.findMany()
+       res.json(users)
+     } catch(err) {
+       console.log(err)
+     }
+   })
+   
 
 export default app
