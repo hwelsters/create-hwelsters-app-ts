@@ -1,0 +1,11 @@
+FROM node:18-alpine
+WORKDIR /app
+
+COPY tsconfig.json .
+COPY ./prisma ./prisma
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn install
+
+CMD ["yarn", "test"]

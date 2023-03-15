@@ -1,8 +1,9 @@
 {
   "scripts": {
     "dev": "docker compose --env-file .env.dev -f docker-compose.dev.yml",
-    "dev:bash": "docker compose --env-file .env.dev -f docker-compose.dev.yml exec backend /bin/sh",
-    "test": "yarn dev up && yarn dev down",
+    "dev:start": "yarn dev rm -f && yarn dev up --build",
+    "dev:bash": "yarn dev exec backend /bin/sh",
+    "test": "docker compose --env-file .env.dev -f docker-compose.dev.yml up --build",
     "clean": "docker container prune & docker volume prune",
     "uncommited": "git ls-files --modified --deleted"
   }

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node build/index.js",
-    "dev": "npx prisma migrate dev --name init && npx prisma db seed && nodemon --exec ts-node src/index.ts",
+    "dev": "yarn prisma migrate dev --name init && yarn prisma db seed && nodemon --exec ts-node src/index.ts",
     "build": "tsc",
-    "test": "jest",
+    "test": "yarn prisma migrate dev --name init && yarn prisma db seed && jest",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix ./ --ext .ts"
   },
