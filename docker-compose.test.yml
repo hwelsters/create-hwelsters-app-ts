@@ -27,7 +27,7 @@ services:
     env_file: .env.dev
     volumes:
       - ./backend/src:/app/src:ro
-      - ./backend/tests:/app/tests:ro
+      - ./backend/__tests__:/app/__tests__:ro
     depends_on:
       database:
         condition: service_healthy
