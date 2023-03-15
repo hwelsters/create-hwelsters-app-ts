@@ -3,7 +3,10 @@
     "dev": "docker compose --env-file .env.dev -f docker-compose.dev.yml",
     "dev:start": "yarn dev rm -f && yarn dev up --build",
     "dev:bash": "yarn dev exec backend /bin/sh",
-    "test": "docker compose --env-file .env.dev -f docker-compose.dev.yml up --build",
+
+    "test": "docker compose --env-file .env.dev -f docker-compose.test.yml",
+    "test:start": "yarn test rm -f && yarn test up --build",
+
     "clean": "docker container prune & docker volume prune",
     "uncommited": "git ls-files --modified --deleted"
   }
