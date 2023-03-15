@@ -26,8 +26,14 @@ services:
       PORT: "${BACKEND_PORT}"
     env_file: .env.dev
     volumes:
-      - ./backend/src:/app/src
-      - ./backend/__tests__:/app/__tests__
+      - type: volume
+        source: ./backend/src
+        target: /app/src
+        read_only: true
+      - type: volume
+        source: ./backend/tests
+        target: /app/tests
+        read_only: true
     depends_on:
       database:
         condition: service_healthy
