@@ -6,7 +6,7 @@
     "dev:down": "yarn dev down",
 
     "test": "docker compose --env-file .env.dev -f docker-compose.test.yml",
-    "test:start": "yarn test rm -f && yarn test up --build",
+    "test:start": "yarn test rm -f && yarn test up --build --exit-code-from backend ",
 
     "clean": "docker container prune & docker volume prune",
     "uncommited": "git ls-files --modified --deleted"

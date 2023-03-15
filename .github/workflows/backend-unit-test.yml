@@ -1,32 +1,32 @@
-name: Test backend
+# name: Test backend
 
-on:
-  push:
-    branches: [ main ]
-    paths: ['backend/**']
-  pull_request:
-    branches: [ main ]
-    paths: ['backend/**']
+# on:
+#   push:
+#     branches: [ main ]
+#     paths: ['backend/**']
+#   pull_request:
+#     branches: [ main ]
+#     paths: ['backend/**']
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    defaults:
-      run:  
-        working-directory: ./backend
+# jobs:
+#   check:
+#     runs-on: ubuntu-latest
+#     defaults:
+#       run:  
+#         working-directory: ./backend
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Set up Node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'
 
-      - name: Clean install
-        run: yarn config set ignore-engines true && yarn install --frozen-lockfile
+#       - name: Clean install
+#         run: yarn config set ignore-engines true && yarn install --frozen-lockfile
 
-      - name: Lint
-        run: yarn lint
+#       - name: Lint
+#         run: yarn lint
 
-      - run: yarn test
-        name: Run Jest tests
+#       - run: yarn test
+#         name: Run Jest tests

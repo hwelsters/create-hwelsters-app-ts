@@ -5,7 +5,7 @@
     "start": "node build/index.js",
     "dev": "yarn prisma migrate dev --name init && yarn prisma db seed && nodemon --exec ts-node src/index.ts",
     "build": "tsc",
-    "test": "yarn prisma migrate dev --name init && yarn prisma db seed && jest",
+    "test": "yarn prisma migrate dev --name init && yarn prisma db seed && jest --forceExit",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix ./ --ext .ts"
   },

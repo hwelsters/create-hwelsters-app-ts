@@ -19,12 +19,3 @@ test('app.ts :: /api :: should return health check and status 200', async () => 
       expect(response.body).toContain('HEALTH CHECK')
     })
 })
-
-test('app.ts :: /api :: should return health check and status 200', async () => {
-  await request(app)
-    .get('/asdaqwe')
-    .then((response: any) => {
-      expect(response.statusCode).toBe(200)
-      expect(response.body).toContain('HEALTH CHECK')
-    })
-})
