@@ -26,14 +26,9 @@ services:
       PORT: "${BACKEND_PORT}"
     env_file: .env.dev
     volumes:
-      - type: volume
-        source: ./backend/src
-        target: /app/src
-        read_only: true
-      - type: volume
-        source: ./backend/tests
-        target: /app/tests
-        read_only: true
+      - ./backend/prisma:/app/prisma:ro
+      - ./backend/src:/app/src:ro
+      - ./backend/tests:/app/tests:ro
     depends_on:
       database:
         condition: service_healthy
