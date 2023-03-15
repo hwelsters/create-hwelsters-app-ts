@@ -27,7 +27,6 @@ services:
     env_file: .env.dev
     volumes:
       - ./backend/src:/app/src:ro
-      - ./backend/prisma:/app/prisma:ro
     depends_on:
       database:
         condition: service_healthy

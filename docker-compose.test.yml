@@ -26,7 +26,6 @@ services:
       PORT: "${BACKEND_PORT}"
     env_file: .env.dev
     volumes:
-      - ./backend/prisma:/app/prisma:ro
       - ./backend/src:/app/src:ro
       - ./backend/tests:/app/tests:ro
     depends_on:
