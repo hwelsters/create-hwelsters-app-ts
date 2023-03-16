@@ -8,7 +8,11 @@
 
 *************************************************/
 
-import { PrismaClient } from '@prisma/client'
+import resetDB from './reset-db'
 
-const prisma = new PrismaClient()
-export default prisma
+// TODO: Seems fairly slow and computationally expensive. 
+// Might consider optimizations in the future as I 
+// start to add more tests. Works ok for now
+beforeEach(() => {
+    resetDB();
+})

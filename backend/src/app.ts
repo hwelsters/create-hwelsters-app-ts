@@ -14,7 +14,10 @@ import morgan from 'morgan'
 
 import dotenv from 'dotenv'
 
-import validateEnv from './utils/validate_env'
+import validateEnv from './utils/validate-env'
+
+// JUST FOR TESTING
+import { PrismaClient } from '@prisma/client'
 
 dotenv.config()
 validateEnv()
@@ -25,19 +28,15 @@ app.use(morgan('tiny'))
 
 const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json('HEALTH CHECK :: Health checked! 💉')
 app.get('/api', onHealthCheck)
-
-// JUST FOR TESTING
-import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 app.get('/users', async (req, res) => {
-     try { 
-       const users = await prisma.user.findMany()
-       res.json(users)
-     } catch(err) {
-       console.log(err)
-     }
-   })
-   
+  try {
+    const users = await prisma.user.findMany()
+    res.json(users)
+  } catch (err) {
+    console.log(err)
+  }
+})
 
 export default app
