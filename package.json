@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "docker compose --env-file .env.dev -f docker-compose.dev.yml",
-    "dev:up": "yarn dev rm -f && yarn dev up --build --detach",
+    "dev:up": "yarn dev rm -f && yarn dev up --build",
     "dev:bash": "yarn dev exec backend /bin/sh",
     "dev:down": "yarn dev down",
 
