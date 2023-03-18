@@ -16,9 +16,6 @@ import dotenv from 'dotenv'
 
 import validateEnv from './utils/validate-env'
 
-// JUST FOR TESTING
-import { PrismaClient } from '@prisma/client'
-
 dotenv.config()
 validateEnv()
 
