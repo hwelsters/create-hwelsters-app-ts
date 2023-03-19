@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node src/index.js",
     "dev": "yarn prisma migrate dev --name init && yarn prisma db seed && nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "test": "yarn prisma migrate dev --name init && yarn prisma db seed && jest",
@@ -32,6 +32,7 @@
     "supertest": "^6.3.3",
     "ts-jest": "^29.0.5",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2",
     "typescript": "*"
   },
   "dependencies": {

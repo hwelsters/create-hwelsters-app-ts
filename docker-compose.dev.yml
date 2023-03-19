@@ -24,6 +24,7 @@ services:
     environment:
       DATABASE_URL: ${DATABASE_URL}
       PORT: "${BACKEND_PORT}"
+      CHOKIDAR_USEPOLLING: true
     env_file: .env.dev
     volumes:
       - ./backend/src:/app/src:ro

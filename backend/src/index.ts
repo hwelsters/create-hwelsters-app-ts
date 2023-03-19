@@ -7,8 +7,9 @@
                 Sup dudes!
 
 *************************************************/
+import 'module-alias/register';
 
-import app from './app'
+import app from '@root/app'
 const port = process.env.PORT ?? 4000
 
 const onBackendLive = (): void => { console.log('LIVE :: Backend is up and running! 🎉') }

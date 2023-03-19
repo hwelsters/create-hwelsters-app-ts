@@ -7,6 +7,7 @@
                 Sup dudes!
 
 *************************************************/
+import 'module-alias/register';
 
 import express, { type Application, type Request, type Response } from 'express'
 import cors from 'cors'
@@ -14,7 +15,7 @@ import morgan from 'morgan'
 
 import dotenv from 'dotenv'
 
-import validateEnv from './utils/validate-env'
+import validateEnv from '@root/utils/validate-env'
 
 dotenv.config()
 validateEnv()

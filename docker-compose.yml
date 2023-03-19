@@ -18,16 +18,26 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: Dockerfile.test
+      dockerfile: Dockerfile
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     environment:
       DATABASE_URL: ${DATABASE_URL}
       PORT: "${BACKEND_PORT}"
     env_file: .env.dev
-    volumes:
-      - ./backend/src:/app/src:ro
-      - ./backend/__tests__:/app/__tests__:ro
     depends_on:
       database:
         condition: service_healthy
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      PORT: "${FRONTEND_PORT}"
+    env_file: .env.dev
+    volumes:
+      - ./frontend/src:/app/src:ro

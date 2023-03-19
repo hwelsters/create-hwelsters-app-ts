@@ -13,9 +13,13 @@ RUN ls
 
 FROM node:18-alpine
 WORKDIR /app
+
 COPY package*.json .
 COPY tsconfig.json .
 COPY yarn.lock .
 RUN yarn install
-COPY --from=build /app/build ./build
+
+# TODO: Quick bandaid fix
+COPY --from=build /app/build ./src
+
 CMD ["yarn", "start"]
