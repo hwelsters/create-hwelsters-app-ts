@@ -5,6 +5,7 @@
 [✔️] Express import aliasing
 [✔️] Set up grpc? or rest. I dunno which one I should do. How bout both on different branches? Nah, Imma do REST.
 [✔️] Input validation on backend?
+[❌] NGINX
 [❌] AWS ECS Terraform provisioning using Docker Compose
 [❌] S3 Terraform Provisioning + Service Discovery on backend
 [❌] S3 File upload with public read access
