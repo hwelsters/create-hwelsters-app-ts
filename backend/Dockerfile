@@ -19,7 +19,9 @@ COPY tsconfig.json .
 COPY yarn.lock .
 RUN yarn install
 
-# TODO: Quick bandaid fix
+COPY ./prisma .
+RUN yarn prisma generate
+
 COPY --from=build /app/build ./src
 
 CMD ["yarn", "start"]
