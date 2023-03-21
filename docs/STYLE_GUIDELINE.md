@@ -1,1 +1,1 @@
-`File and folder names` : words are all lowercase and are separated by underscore(_)  
+`File and folder names` : kebab-case
