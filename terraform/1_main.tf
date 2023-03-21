@@ -20,14 +20,15 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-1"
+  profile = "default"
+  region  = "us-west-1"
 }
 
 resource "aws_s3_bucket" "bucky" {
   bucket = "loveneet-bucket"
 
   tags = {
-    Name        = "My bucket"
+    Name = "My bucket"
   }
 }
 

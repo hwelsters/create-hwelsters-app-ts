@@ -9,4 +9,4 @@
 //*************************************************
 
 aws_region = "us-west-1"
-name = "snakecode"
+name       = "snakecode"
