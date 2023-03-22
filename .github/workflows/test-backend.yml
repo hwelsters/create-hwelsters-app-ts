@@ -1,12 +1,12 @@
-name: "Integration testing"
+name: "Backend testing"
 
 on:
   pull_request:
     branches: [main]
-    paths: ['backend/**', 'frontend/**', 'cypress/**']
+    paths: ['backend/**']
   push:
     branches: [main]
-    paths: ['backend/**', 'frontend/**', 'cypress/**']
+    paths: ['backend/**']
 
 jobs:
   tests:
