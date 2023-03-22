@@ -21,6 +21,7 @@ TODO:
 - [🦆] Express import aliasing
 - [🦆] Set up grpc? or rest. I dunno which one I should do. How bout both on different branches? Nah, Imma do REST.
 - [🦆] Input validation on backend?
+- [🦜] Change backend tests to run on multi-stage built containers similar to production environment
 - [🦜] Provision ECR with Terraform
 - [🦜] Push automatically to ECR using Github Actions
 - [🦜] NGINX
