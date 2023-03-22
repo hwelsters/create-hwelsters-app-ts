@@ -9,7 +9,7 @@
     "test": "docker compose --env-file .env.dev -f docker-compose.test.yml",
     "test:start": "yarn test rm -f && yarn test up --build --exit-code-from backend ",
 
-    "build": "docker compose --env-file .env.dev",
+    "build": "docker compose --env-file .env.dev -f docker-compose.yml",
     "build:up": "yarn build up --build",
     "build:bash": "yarn build exec backend /bin/sh",
 
