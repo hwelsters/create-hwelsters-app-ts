@@ -19,14 +19,14 @@ const usersData = [ // we only have on user here
 ]
 
 const main = async () => {
-  console.log('start seeding …') 
+  console.log('start seeding …')
   for (const _user of usersData) {
     const user = await prisma.user.create({
-      data: _user,
-    });
-    console.log(`Created user with id: ${user.id}`);
+      data: _user
+    })
+    console.log(`Created user with id: ${user.id}`)
   }
-  console.log('seeding done');
+  console.log('seeding done')
 }
 
 main()

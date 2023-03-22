@@ -7,7 +7,7 @@
                 Sup dudes!
 
 *************************************************/
-import 'module-alias/register';
+import 'module-alias/register'
 
 import express, { type Application, type Request, type Response } from 'express'
 import cors from 'cors'
@@ -16,6 +16,9 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 
 import validateEnv from '@root/utils/validate-env'
+
+// TEST
+import { PrismaClient } from '@prisma/client'
 
 dotenv.config()
 validateEnv()
@@ -27,8 +30,6 @@ app.use(morgan('tiny'))
 const onHealthCheck = (_: Request, response: Response): Response<any, Record<string, any>> => response.status(200).json('HEALTH CHECK :: Health checked! 💉')
 app.get('/api', onHealthCheck)
 
-// TEST
-import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient()
 
 app.get('/users', async (req, res) => {

@@ -10,7 +10,7 @@
 
 import prisma from './prisma'
 
-export default async () => {
+export default async (): Promise<void> => {
   await prisma.$transaction([
     prisma.user.deleteMany() // Do this for each table
   ])

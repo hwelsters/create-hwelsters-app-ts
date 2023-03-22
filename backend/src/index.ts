@@ -7,7 +7,7 @@
                 Sup dudes!
 
 *************************************************/
-import 'module-alias/register';
+import 'module-alias/register'
 
 import app from '@root/app'
 const port = process.env.PORT ?? 4000
