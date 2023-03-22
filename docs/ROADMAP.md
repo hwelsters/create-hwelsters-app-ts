@@ -31,3 +31,7 @@ TODO:
 - [🦜] S3 --> CDN
 - [🦜] Provision RDS with PostgresSQL
 - [🦜] Set up E2E testing + containerize tests with Cypress
+
+USEFUL LINKS:
+- Deploying ECS resources using Docker Compose:		https://docs.docker.com/cloud/ecs-integration/
+- Incompatible Docker Compose file			  :		https://stackoverflow.com/questions/63385177/docker-compose-file-is-incompatible-with-amazon-ecs
