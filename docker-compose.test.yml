@@ -4,7 +4,7 @@ services:
   database:
     image: "postgres"
     ports:
-      - "2345:${POSTGRES_PORT}"
+      - "${POSTGRES_PORT}:5432"
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}

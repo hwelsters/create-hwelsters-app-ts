@@ -1,7 +1,7 @@
 FROM node:18-alpine
 WORKDIR /app
 
-COPY jest.config.js .
+COPY jest.config.ts .
 COPY tsconfig.json .
 COPY ./prisma ./prisma
 COPY package.json .
