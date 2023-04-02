@@ -11,6 +11,7 @@
 import request from 'supertest'
 import app from '../../src/app'
 
+// Ensures API returns 200 code and contains that the response contains the text 'HEALTH CHECK'
 test('app.ts :: /api :: should return health check and status 200', async () => {
   await request(app)
     .get('/api')
