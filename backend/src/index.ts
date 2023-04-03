@@ -7,6 +7,7 @@
                 Sup dudes!
 
 *************************************************/
+
 import 'module-alias/register'
 
 import app from '@root/app'

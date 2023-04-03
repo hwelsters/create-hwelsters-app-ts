@@ -11,8 +11,8 @@
 import { cleanEnv, port, str } from 'envalid'
 
 // **********************************************************
-// Ensures that all required environment variables are present
-// and adhere to required types
+//  Ensures that all required environment variables are present
+//  and adhere to required types
 // **********************************************************
 const validateEnv = (): void => {
   cleanEnv(process.env, {

@@ -13,6 +13,10 @@ import resetDB from './reset-db'
 // TODO: Seems fairly slow and computationally expensive.
 // Might consider optimizations in the future as I
 // start to add more tests. Works ok for now
+
+// **********************************************************
+//  Clear database before each test
+// **********************************************************
 beforeEach(async () => {
   await resetDB()
 })
