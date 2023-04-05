@@ -13,9 +13,9 @@ import app from '../../src/app'
 
 // **********************************************************
 // Tests that /api returns 200 code and that the response 
-// contains the text 'HEALTH CHECK'
+// body contains the text 'HEALTH CHECK'
 // **********************************************************
-test('app.ts :: /api :: should return health check and status 200', async () => {
+test('app.ts :: /api :: should return status 200 and contain the text \'HEALTH CHECK\' in response', async () => {
   await request(app)
     .get('/api')
     .then((response: any) => {
