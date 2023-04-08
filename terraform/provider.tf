@@ -8,7 +8,12 @@
 
 *************************************************/
 
-import { PrismaClient } from '@prisma/client'
+/*=============================
+            Provider
+=============================*/
 
-const prisma = new PrismaClient()
-export default prisma
+# ------- Providers -------
+provider "aws" {
+    profile = var.aws_profile
+    region = var.aws_region
+}
