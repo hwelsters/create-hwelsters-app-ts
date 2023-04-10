@@ -33,6 +33,12 @@ TODO:
 - [🦜] Provision RDS with PostgresSQL
 - [🦜] Set up E2E testing + containerize tests with Cypress
 
+TESTS:
+- [🦜] E2E testing with cypress
+- [🦜] Backend tests with Jest / Supertest
+- [🦜] Frontend tests with Jest
+- [🦜] Load testing with Artillery
+
 USEFUL LINKS:
 - Deploying ECS resources using Docker Compose:		https://docs.docker.com/cloud/ecs-integration/
 - Incompatible Docker Compose file			  :		https://stackoverflow.com/questions/63385177/docker-compose-file-is-incompatible-with-amazon-ecs
