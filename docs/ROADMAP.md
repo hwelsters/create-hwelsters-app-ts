@@ -21,9 +21,12 @@ TODO:
 - [🦆] Express import aliasing
 - [🦆] Set up grpc? or rest. I dunno which one I should do. How bout both on different branches? Nah, Imma do REST.
 - [🦆] Input validation on backend?
+
+- [🦜] Provision ECR with Terraform
+- [🦜] Auto-push to ECR
+
 - [🦜] Change backend tests to run on multi-stage built containers similar to production environment
 - [🦜] Provision ECR with Terraform
-- [🦜] Push automatically to ECR using Github Actions
 - [🦜] NGINX
 - [🦜] File storage
 - [🦜] 3 tier architecture as specified by Medium post (VPCs look kinda expensive so I'm not gonna do this anymore)
@@ -37,7 +40,7 @@ TESTS:
 - [🦜] E2E testing with cypress
 - [🦜] Backend tests with Jest / Supertest
 - [🦜] Frontend tests with Jest
-- [🦜] Load testing with Artillery
+- [🦜] Load testing with
 
 USEFUL LINKS:
 - Deploying ECS resources using Docker Compose:		https://docs.docker.com/cloud/ecs-integration/
