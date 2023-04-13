@@ -8,3 +8,8 @@
 
 *************************************************/
 
+# ---- Container Repository ---
+module "ecr_repository" {
+  source = "./modules/ecr"
+  name   = "ecr_repo"
+}

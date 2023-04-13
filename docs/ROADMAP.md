@@ -22,8 +22,8 @@ TODO:
 - [🦆] Set up grpc? or rest. I dunno which one I should do. How bout both on different branches? Nah, Imma do REST.
 - [🦆] Input validation on backend?
 
-- [🦜] Provision ECR with Terraform
-- [🦜] Auto-push to ECR
+- [🦆] Provision ECR with Terraform
+- [🦆] Auto-push to ECR
 
 - [🦜] Change backend tests to run on multi-stage built containers similar to production environment
 - [🦜] Provision ECR with Terraform
