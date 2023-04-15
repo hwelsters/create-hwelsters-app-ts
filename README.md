@@ -14,3 +14,7 @@
 		<img alt="Stargazers" src="https://img.shields.io/github/stars/hwelsters/create-hwelsters-app-ts?style=for-the-badge&logo=starship&color=ffe75c&logoColor=ffffff&labelColor=292841"></a>
 </p>
 
+#### Dev tools
+- Typescript
+- Cypress
+- Yarn
