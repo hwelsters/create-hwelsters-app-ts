@@ -8,14 +8,12 @@
 
 *************************************************/
 
-# ---- Container Repository ---
-module "ecr_repository" {
-  source = "./modules/ecr"
-  name   = "ecr_repo"
+variable "name" {
+  description = "The name of your ECS Cluster"
+  type        = string
 }
 
-# -------- ECS Cluster --------
-module "ecs" {
-  source = "./modules/ecs"
-  name   = "ecs"
+variable "repo_url" {
+  description = "The repo URL of ECR"
+  type        = string
 }
