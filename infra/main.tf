@@ -15,3 +15,7 @@ module "ecr_backend" {
   source = "./modules/ecr"
   name   = "${var.environment_name}-backend-repo"
 }
+
+/*==========================================
+    AWS Code Pipeline
+==========================================*/
