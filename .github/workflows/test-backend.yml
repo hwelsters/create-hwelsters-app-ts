@@ -3,10 +3,10 @@ name: "Backend testing"
 on:
   pull_request:
     branches: [main]
-    paths: ['backend/**']
+    paths: ['code/backend/**']
   push:
     branches: [main]
-    paths: ['backend/**']
+    paths: ['code/backend/**']
 
 jobs:
   tests:

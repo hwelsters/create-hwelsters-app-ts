@@ -1,0 +1,16 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "dev": "docker compose --env-file .env.dev -f docker-compose.dev.yml",
+    "dev:up": "npm run dev rm -f && npm run dev up --build",
+    "dev:bash": "npm run dev exec backend /bin/sh",
+    "dev:down": "npm run dev down",
+    "test": "docker compose --env-file .env.test -f docker-compose.test.yml",
+    "test:start": "npm run test rm -f && npm run test up --build --exit-code-from backend ",
+    "build": "docker compose --env-file .env.dev -f docker-compose.yml",
+    "build:up": "npm run build up --build",
+    "build:bash": "npm run build exec backend /bin/sh",
+    "clean": "docker container prune & docker volume prune",
+    "uncommited": "git ls-files --modified --deleted"
+  }
+}
