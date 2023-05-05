@@ -18,11 +18,17 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $REPO_URL:$IMAGE_TAG
-      - sed -i "s|<CONTAINER_NAME>|$CONTAINER_NAME|g" appspec.yaml taskdef.json
-      - sed -i "s|<SERVICE_PORT>|$SERVICE_PORT|g" appspec.yaml taskdef.json
-      - sed -i "s|<REPO_URL>|$REPO_URL|g" taskdef.json
-      - sed -i "s|<AWS_ACCOUNT_ID>|$AWS_ACCOUNT_ID|g" taskdef.json
-      - sed -i "s|<AWS_REGION>|$AWS_REGION|g" taskdef.json
+
+      - echo Changing directory to templates directory
+      - cd ./infra/templates
+      - echo Preparing spec files in new folder
+      - mkdir artifacts
+
+      # - sed -i "s|<CONTAINER_NAME>|$CONTAINER_NAME|g" appspec.yaml taskdef.json
+      # - sed -i "s|<SERVICE_PORT>|$SERVICE_PORT|g" appspec.yaml taskdef.json
+      # - sed -i "s|<REPO_URL>|$REPO_URL|g" taskdef.json
+      # - sed -i "s|<AWS_ACCOUNT_ID>|$AWS_ACCOUNT_ID|g" taskdef.json
+      # - sed -i "s|<AWS_REGION>|$AWS_REGION|g" taskdef.json
 
 artifacts:
   files:
