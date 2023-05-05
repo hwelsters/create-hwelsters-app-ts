@@ -1,3 +1,6 @@
 aws_profile = ""
 aws_region = "us-west-1"
 environment_name = "snakecode"
+repository_owner = "hwelsters"
+repository_name = "create-hwelsters-app-ts"
+repository_branch = "main"
