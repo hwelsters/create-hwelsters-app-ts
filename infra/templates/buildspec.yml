@@ -24,7 +24,7 @@ phases:
       - echo Preparing spec files in new folder
       - mkdir artifacts
       - echo Changing directory to the Artifacts directory
-      - cd Artifacts
+      - cd artifacts
 
 artifacts:
   files:
