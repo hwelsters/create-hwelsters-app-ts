@@ -27,5 +27,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'infra/templates'
+  base-directory: 'infra/templates/artifacts'
   discard-paths: yes
