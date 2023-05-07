@@ -42,27 +42,27 @@ variable "port_app_client" {
 variable "buildspec_path" {
   description = "The location of the buildspec file"
   type        = string
-  default     = "./Infrastructure/Templates/buildspec.yml"
+  default     = "./infra/templates/buildspec.yml"
 }
 
 variable "folder_path_server" {
   description = "The location of the server files"
   type        = string
-  default     = "./Code/server/."
+  default     = "./code/server/."
 }
 
 variable "folder_path_client" {
   description = "The location of the client files"
   type        = string
-  default     = "./Code/client/."
+  default     = "./code/client/."
 }
 
 variable "container_name" {
   description = "The name of the container of each ECS service"
   type        = map(string)
   default = {
-    server = "Container-server"
-    client = "Container-client"
+    server = "container-server"
+    client = "container-client"
   }
 }
 
