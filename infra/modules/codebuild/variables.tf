@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 variable "name" {
   type        = string
   description = "CodeBuild Project name"
@@ -30,10 +33,10 @@ variable "buildspec_path" {
   type        = string
 }
 
-# variable "task_definition_family" {
-#   description = "The family name of the Task definition"
-#   type        = string
-# }
+variable "task_definition_family" {
+  description = "The family name of the Task definition"
+  type        = string
+}
 
 variable "container_name" {
   description = "The name of the Container specified in the Task definition"
@@ -45,25 +48,25 @@ variable "service_port" {
   type        = number
 }
 
-# variable "ecs_role" {
-#   description = "The name of the ECS Task Excecution role to specify in the Task Definition"
-#   type        = string
-# }
+variable "ecs_role" {
+  description = "The name of the ECS Task Excecution role to specify in the Task Definition"
+  type        = string
+}
 
-# variable "server_alb_url" {
-#   description = "The server ALB DNS. Used to build the code for the frontend layer"
-#   type        = string
-#   default     = ""
-# }
+variable "server_alb_url" {
+  description = "The server ALB DNS. Used to build the code for the frontend layer"
+  type        = string
+  default     = ""
+}
 
-# variable "ecs_task_role" {
-#   description = "The name of the ECS Task role to specify in the Task Definition"
-#   type        = string
-#   default     = "null"
-# }
+variable "ecs_task_role" {
+  description = "The name of the ECS Task role to specify in the Task Definition"
+  type        = string
+  default     = "null"
+}
 
-# variable "dynamodb_table_name" {
-#   description = "The name of Dynamodb table used by the server application"
-#   type        = string
-#   default     = ""
-# }
+variable "dynamodb_table_name" {
+  description = "The name of Dynamodb table used by the server application"
+  type        = string
+  default     = ""
+}

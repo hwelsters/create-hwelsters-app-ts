@@ -1,7 +1,6 @@
 # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: MIT-0
 
-variable "bucket_name" {
-  description = "The name of your S3 bucket"
-  type        = string
+output "ecs_service_name" {
+  value = aws_ecs_service.ecs_service.name
 }

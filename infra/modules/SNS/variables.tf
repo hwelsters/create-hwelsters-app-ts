@@ -1,7 +1,7 @@
 # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: MIT-0
 
-variable "bucket_name" {
-  description = "The name of your S3 bucket"
+variable "sns_name" {
+  description = "The name of the SNS topic"
   type        = string
 }

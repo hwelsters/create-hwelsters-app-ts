@@ -1,44 +1,68 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 variable "name" {
-  description = "The name of the resource."
+  description = "The CodePipeline pipeline name"
   type        = string
 }
 
-variable "codepipeline_role" {
-  description = "The role assumed by codepipeline."
+variable "pipe_role" {
+  description = "The role assumed by CodePipeline"
   type        = string
 }
 
 variable "s3_bucket" {
-  description = "The S3 bucket in which the artifacts will be stored."
-  type        = string
-}
-
-variable "repo_owner" {
-  description = "The Github repository's owner's username"
-  type        = string
-}
-
-variable "repo_name" {
-  description = "The Github repository's name"
-  type        = string
-}
-
-variable "branch" {
-  description = "The Github branch that will be used to trigger the CodePipeline"
+  description = "S3 bucket used for the artifact store"
   type        = string
 }
 
 variable "github_token" {
   description = "Personal access token from Github"
   type        = string
+  sensitive   = true
 }
 
-variable "codebuild_project_name_backend" {
-  description = "The Backend's CodeBuild project name"
+variable "repo_owner" {
+  description = "The username of the Github repository owner"
   type        = string
 }
 
-variable "codebuild_project_name_frontend" {
-  description = "The Frontend's CodeBuild project name"
+variable "repo_name" {
+  description = "Github repository's name"
+  type        = string
+}
+
+variable "branch" {
+  description = "Github branch used to trigger the CodePipeline"
+  type        = string
+}
+
+variable "codebuild_project_server" {
+  description = "Server's CodeBuild project name"
+  type        = string
+}
+
+variable "codebuild_project_client" {
+  description = "Client's CodeBuild project name"
+  type        = string
+}
+
+variable "app_name_server" {
+  description = "CodeDeploy Application name for the server"
+  type        = string
+}
+
+variable "app_name_client" {
+  description = "CodeDeploy Application name for the client"
+  type        = string
+}
+
+variable "deployment_group_server" {
+  description = "CodeDeploy deployment group name for the server"
+  type        = string
+}
+
+variable "deployment_group_client" {
+  description = "CodeDeploy deployment group name for the client"
   type        = string
 }

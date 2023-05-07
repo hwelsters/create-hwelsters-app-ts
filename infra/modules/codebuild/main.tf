@@ -1,3 +1,10 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+/*==================================
+      AWS CodeBuild Project
+===================================*/
+
 resource "aws_codebuild_project" "aws_codebuild" {
   name          = var.name
   description   = "Terraform codebuild project"
@@ -34,17 +41,15 @@ resource "aws_codebuild_project" "aws_codebuild" {
       value = "latest"
     }
 
-    # DB STUFF, CHANGE LATER
-    # environment_variable {
-    #   name  = "DYNAMODB_TABLE"
-    #   value = "latest"
-    # }
+    environment_variable {
+      name  = "DYNAMODB_TABLE"
+      value = var.dynamodb_table_name
+    }
 
-    # ECS STUFF, CHANGE LATER
-    # environment_variable {
-    #   name  = "TASK_DEFINITION_FAMILY"
-    #   value = var.task_definition_family
-    # }
+    environment_variable {
+      name  = "TASK_DEFINITION_FAMILY"
+      value = var.task_definition_family
+    }
 
     environment_variable {
       name  = "CONTAINER_NAME"
@@ -59,6 +64,21 @@ resource "aws_codebuild_project" "aws_codebuild" {
     environment_variable {
       name  = "FOLDER_PATH"
       value = var.folder_path
+    }
+
+    environment_variable {
+      name  = "ECS_ROLE"
+      value = var.ecs_role
+    }
+
+    environment_variable {
+      name  = "ECS_TASK_ROLE"
+      value = var.ecs_task_role
+    }
+
+    environment_variable {
+      name  = "SERVER_ALB_URL"
+      value = var.server_alb_url
     }
   }
 
