@@ -55,13 +55,13 @@ variable "ecr_repositories" {
   default     = ["*"]
 }
 
-variable "code_build_projects" {
+variable "codebuild_projects" {
   description = "The Code Build projects to which grant IAM access"
   type        = list(string)
   default     = ["*"]
 }
 
-variable "code_deploy_resources" {
+variable "codedeploy_resources" {
   description = "The Code Deploy applications and deployment groups to which grant IAM access"
   type        = list(string)
   default     = ["*"]

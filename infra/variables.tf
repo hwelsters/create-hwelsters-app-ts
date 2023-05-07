@@ -66,17 +66,6 @@ variable "container_name" {
   }
 }
 
-variable "iam_role_name" {
-  description = "The name of the IAM Role for each service"
-  type        = map(string)
-  default = {
-    devops        = "DevOps-Role"
-    ecs           = "ECS-task-excecution-Role"
-    ecs_task_role = "ECS-task-Role"
-    codedeploy    = "CodeDeploy-Role"
-  }
-}
-
 variable "repository_owner" {
   description = "The name of the owner of the Github repository"
   type        = string

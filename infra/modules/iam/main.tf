@@ -195,7 +195,7 @@ data "aws_iam_policy_document" "role_policy_devops_role" {
       "codebuild:StartBuildBatch",
       "codebuild:StopBuild"
     ]
-    resources = var.code_build_projects
+    resources = var.codebuild_projects
   }
   statement {
     sid    = "AllowCodebuildList"
@@ -216,7 +216,7 @@ data "aws_iam_policy_document" "role_policy_devops_role" {
       "codedeploy:GetDeploymentGroup",
       "codedeploy:RegisterApplicationRevision"
     ]
-    resources = var.code_deploy_resources
+    resources = var.codedeploy_resources
   }
   statement {
     sid    = "AllowCodeDeployConfigs"
