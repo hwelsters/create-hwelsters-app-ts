@@ -1,27 +1,18 @@
-FROM node:18-alpine AS build
-WORKDIR /app
-COPY package*.json .
-COPY tsconfig.json .
-COPY yarn.lock .
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
 
-RUN yarn --pure-lockfile
-RUN yarn install
+FROM public.ecr.aws/bitnami/node:latest
 
-COPY ./src ./src
-RUN yarn build
-RUN ls
+RUN mkdir -p /home/node/app/node_modules
 
-FROM node:18-alpine
-WORKDIR /app
+WORKDIR /home/node/app
 
-COPY package*.json .
-COPY tsconfig.json .
-COPY yarn.lock .
-RUN yarn install
+COPY package*.json ./
 
-COPY ./prisma .
-RUN yarn prisma generate
+RUN npm install
 
-COPY --from=build /app/build ./src
+COPY . .
 
-CMD ["yarn", "start"]
+EXPOSE 3001
+
+CMD [ "npm", "start" ]
